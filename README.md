@@ -9,14 +9,7 @@ To run the game, use
 cargo run --features "vulkan"
 `
 
-on Windows and Linux, and
-
-`
-
-cargo run --features "metal"
-`
-
-on macOS.
+on Windows and Linux, and on macOS.
 
 For building without any graphics backend, you can use
 
