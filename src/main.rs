@@ -31,7 +31,7 @@ use amethyst::renderer::types::DefaultBackend;
 
 mod components;
 mod systems;
-//mod visual_utils;
+mod visual_utils;
 mod worldgen;
 
 #[derive(Default)]
@@ -54,15 +54,15 @@ impl SimpleState for Example {
             Vector3::new(0.2, -1.0, 0.2),
             1.0,
         );
-//TODO Remove
+
         // Create floor
-//        create_floor(data.world);
+        create_floor(data.world);
 
         // Create the character + camera.
         create_character_entity(data.world);
 
         // Create Box
-//        add_cube_entity(data.world, Vector3::new(0.0, 6.0, 0.0));
+        add_cube_entity(data.world, Vector3::new(0.0, 6.0, 0.0));
     }
 
     fn update(&mut self, data: &mut StateData<'_, GameData<'_, '_>>) -> SimpleTrans {
@@ -157,8 +157,7 @@ fn add_light_entity(world: &mut World, color: Srgb, direction: Vector3<f32>, int
 
     world.create_entity().with(light).build();
 }
-//TODO Remove
-/*
+
 fn create_floor(world: &mut World) {
     let shape = {
         let desc = ShapeDesc::Cube {
@@ -251,7 +250,7 @@ fn add_cube_entity(world: &mut World, pos: Vector3<f32>) {
         .with(rb)
         .build();
 }
-*/
+
 /// Creates three entities:
 /// 1. The character (With RigidBody).
 /// 2. The camera boom handle attached to the character.
