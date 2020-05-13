@@ -134,10 +134,13 @@ fn main() -> Result<(), Error> {
                 ),
         )?
         .with_bundle(
-            RenderingBundle::<types::DefaultBackend>::new()
+            RenderingBundle::<DefaultBackend>::new()
                 .with_plugin(RenderToWindow::from_config_path(display_config_path)?)
-                        .with_clear([0.34, 0.36, 0.52, 1.0]),
-                .with_plugin(RenderShaded3D::default()),
+                .with_plugin(RenderShaded3D::default())
+                .with_plugin(RenderSkybox::with_colors(
+                    Srgb::new(0.82, 0.51, 0.50),
+                    Srgb::new(0.18, 0.11, 0.85),
+                )),
         )?;
     let mut game = Application::build(assets_dir, Example::default())?.build(game_data)?;
     game.run();
