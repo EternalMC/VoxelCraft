@@ -137,7 +137,6 @@ fn main() -> Result<(), Error> {
             RenderingBundle::<types::DefaultBackend>::new()
                 .with_plugin(RenderToWindow::from_config_path(display_config_path)?)
                         .with_clear([0.34, 0.36, 0.52, 1.0]),
-                )
                 .with_plugin(RenderShaded3D::default()),
         )?;
     let mut game = Application::build(assets_dir, Example::default())?.build(game_data)?;
