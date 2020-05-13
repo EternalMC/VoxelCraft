@@ -32,6 +32,7 @@ use amethyst::renderer::types::DefaultBackend;
 mod components;
 mod systems;
 mod visual_utils;
+mod worldgen;
 
 #[derive(Default)]
 struct Example {
