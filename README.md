@@ -1,5 +1,7 @@
 # VoxelCraft
 
+![Rust](https://github.com/EternalMC/VoxelCraft/workflows/Rust/badge.svg)
+
 ## How to run
 
 To run the game, use
