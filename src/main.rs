@@ -12,7 +12,7 @@ use amethyst::{
         camera::Camera,
         light,
         palette::{LinSrgba, Srgb},
-        plugins::{RenderShaded3D, RenderToWindow},
+        plugins::{RenderShaded3D, RenderSkybox, RenderToWindow},
         rendy::mesh::{Normal, Position, Tangent, TexCoord},
         shape::Shape,
         types,
